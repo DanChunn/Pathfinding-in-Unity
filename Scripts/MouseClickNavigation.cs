@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MouseClickNavigation : MonoBehaviour {
+/*
+    Attach to an object with the NavMeshAgent component.
+    Use the mouse to move in the world space.
 
-	//Click to navigate script, path finding agent targets mouse click location
-	//Uses Unity's NavMesh Agent
+*/
+
+
+public class MouseClickNavigation : MonoBehaviour {
 
 	NavMeshAgent pathfinder;
 	Vector3 target;
@@ -22,15 +26,19 @@ public class MouseClickNavigation : MonoBehaviour {
 			
 	}
 
+/*
+
+    Updates the NavMeshAgent's destination
+    
+*/
+
 	IEnumerator UpdatePath()
 	{
 		float refreshRate = .25f;
 
-
 			pathfinder.SetDestination(target);
 
 			yield return new WaitForSeconds(refreshRate);
-
 
 	}
 }

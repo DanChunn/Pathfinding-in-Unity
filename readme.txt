@@ -1,5 +1,5 @@
-A Unity project that demonstrates navigation and pathing using mouseclicks.
+Navigation Test in Unity
 
-Utilizes Unity's built in NavMesh system.
+A Unity demonstration for navigation and pathing using Unity's NavMeshAgent and mouseclicks.
 
 A playable Unity webdemo is available under /Build Tests.

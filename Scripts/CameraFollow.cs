@@ -1,13 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+    Attach to main camera to have the
+    camera follow the player.
+
+*/
+
 public class CameraFollow : MonoBehaviour {
 
-	//Camera Follows Player Script
 
 	Camera cam;
 	Transform target;
-	// Use this for initialization
+
 	void Start () {
 		cam = GetComponent<Camera> ();
 		target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -19,7 +24,6 @@ public class CameraFollow : MonoBehaviour {
 		}
 	}
 	
-	// Update is called once per frame
 	void FixedUpdate () {
 		cam.transform.position = new Vector3(target.position.x, target.position.y+20f, target.position.z);
 	}
